@@ -8,7 +8,7 @@ Hacktoberfest is an annual festival hosted by DigitalOcean that takes place in t
 # Steps to Contribute in repository :
 
 ## Fork this repo (button on top)
-Clone on your local machine
+Clone on your local machine<br>
 `git clone https://github.com/erx21/HacktoberFest2022`
 
 ### Navigate to project directory.
