@@ -11,10 +11,10 @@
  */
 class Solution {
 public:
-    int h(TreeNode* r){
-        if(!r)
+    int h(TreeNode* root){
+        if(!root)
             return 0;
-        return 1+max(h(r->left),h(r->right));
+        return 1+max(h(root->left),h(root->right));
     }
     bool isBalanced(TreeNode* root) {
         if(!root)
