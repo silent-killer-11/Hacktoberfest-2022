@@ -6,7 +6,7 @@
 Hacktoberfest is an annual festival hosted by DigitalOcean that takes place in the month of October to celebrate the open source community. As part of this 31-day celebration, contributors and open source maintainers are encouraged to work on open source projects and win swag to mark the occasion.
 
 # Steps to Contribute in repository :
-Getting Started star_struckhugs:
+
 ## Fork this repo (button on top)
 Clone on your local machine
 `git clone https://github.com/erx21/HacktoberFest2022`
