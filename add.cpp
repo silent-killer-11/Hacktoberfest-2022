@@ -6,7 +6,9 @@ using namespace std;
 
 
 
-
+int sum1(int a,int b){
+		return a+b;
+}
 
 
 
@@ -14,6 +16,7 @@ using namespace std;
 int main() {
 
   cout << 2+5 << endl;
+  cout <<sum1(2,5) << endl;	
 
 
 
