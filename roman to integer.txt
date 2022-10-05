@@ -1,0 +1,40 @@
+class Solution
+{
+    public int romanToInt(String s) 
+    {
+        char[] sym={'I','V','X','L','C','D','M'};
+        int [] val={1,5,10,50,100,500,1000};
+        ArrayList<Integer> rom = new ArrayList<Integer>();
+        int i=0,j=0,num=0;
+        for(i=0;i<s.length();i++)
+        {
+            for(j=0;j<7;j++)
+            {
+                if(s.charAt(i)==sym[j])
+                {
+                    rom.add(val[j]);
+                    break;
+                }
+            }
+        }
+        int new_var=rom.get(0);
+        int cx=0;
+        for(i=0;i<rom.size();i++)
+        {
+            cx=new_var;
+            if(i<rom.size()-1)
+            {
+            new_var=rom.get(i+1);
+            }
+            if(new_var>cx)
+            {
+                num=num-cx;
+            }
+            else
+            {
+                num=num+cx;
+            }
+        }
+        return num;
+    }
+}
