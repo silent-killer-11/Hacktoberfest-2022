@@ -1,13 +1,13 @@
 class Solution {
 public:
-    int dp[46];
+    int memo[46];
     int function(int n){
         if(n==0 || n==1)return 1;
-        if(dp[n]!=-1)return dp[n];
-        return dp[n]= function(n-1) + function(n-2);
+        if(memo[n]!=-1)return memo[n];
+        return memo[n]= function(n-1) + function(n-2);
     }
     int climbStairs(int n) {
-        memset(dp,-1,sizeof dp);
+        memset(memo,-1,sizeof memo);
         return function(n);
     }
 };
