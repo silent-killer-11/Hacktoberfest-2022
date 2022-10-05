@@ -16,6 +16,7 @@ public class Average {
                   ++count;   
              }   
                   averageF = sumF/n;   
+        System.out.println("The sum is"+sumF); 
         System.out.println("The Average is"+averageF);  
     }    
 }  
