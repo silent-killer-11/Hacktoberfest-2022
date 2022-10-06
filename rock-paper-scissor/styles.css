@@ -1,0 +1,24 @@
+#gameDiv {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 3px solid black;
+    border-radius: 20px;
+    text-align: center;
+    padding:  10px;
+    background-color: cadetblue;
+}
+
+.choiceBtn {
+    line-height: 30px;
+    width:150px ;
+    padding:  10px;
+    text-align: center;
+    margin: auto;
+
+}
+
+#playerText {
+    color: blue;
+}
+#computerText {
+    color: yellow;
+}

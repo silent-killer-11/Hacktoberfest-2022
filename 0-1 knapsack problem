@@ -2,7 +2,7 @@
 using namespace std;
  int max(int x, int y)
  {    return (x > y) ? x : y;
- } int knapSack(int W, int w[], int v[], int n) 
+ } int knap(int W, int w[], int v[], int n) 
 {    int i, wt;  
   int K[n + 1][W + 1]; 
    for (i = 0; i <= n; i++)
@@ -23,5 +23,5 @@ K[i][wt] = 0;  
    cin >> w[i];
     }    cout << "Enter the capacity of knapsack";   
  cin >> W; 
-  cout << knapSack(W, w, v, n);
+  cout << knap(W, w, v, n);
  return 0; }

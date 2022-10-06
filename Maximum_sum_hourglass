@@ -1,0 +1,41 @@
+You are given an m x n integer matrix grid.
+
+We define an hourglass as a part of the matrix with the following form:
+
+A B C
+  D
+E F G
+
+
+Return the maximum sum of the elements of an hourglass.
+
+Note that an hourglass cannot be rotated and must be entirely contained within the matrix.
+
+
+SOLUTION:
+
+class Solution {
+public:
+    int maxSum(vector<vector<int>>& arr) {
+        
+        int maxi = 0;
+        
+        int m = arr.size();
+        int n = arr[0].size();
+        
+        int s = 0;
+        
+        for(int i=1;i<m-1;i++)
+        {
+             for(int j=1;j<n-1;j++)
+             {
+                    s = arr[i][j] + arr[i-1][j-1] + arr[i-1][j] + arr[i-1][j+1] + arr[i+1][j-1] + arr[i+1][j] + arr[i+1][j+1];
+                    if(s>maxi)
+                    maxi = s;
+            }
+        }
+        
+        return maxi;
+        
+    }
+};
