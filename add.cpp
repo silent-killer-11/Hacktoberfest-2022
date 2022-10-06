@@ -15,8 +15,11 @@ int sum1(int a,int b){
 
 int main() {
 
-  cout << 2+5 << endl;
-  cout <<sum1(2,5) << endl;	
+  	int a , b;
+	cout<<"Input two numbers : \n";
+	cin >> a >> b;
+	cout<<"Sum of two numbers : ";
+  	cout <<sum1(a,b) << endl;	
 
 
 
