@@ -1,5 +1,5 @@
 class Solution {
-    public int[] twoSum(int[] nums, int target) {
+    public int[] twoSum(int[] nums, int t) {
         int i,j;
         int f,pos,pos1;
         f=0; pos=0;pos1=0;
@@ -9,7 +9,7 @@ class Solution {
             {
                 if(j!=i)
                 {
-                    if(nums[i]+nums[j]==target)
+                    if(nums[i]+nums[j]==t)
                     {
                         f=1;
                         pos=i;
