@@ -4,15 +4,24 @@ using namespace std;
 
 
 
-
-
-
+void sum1(int a,int b)
+{
+  return a+b;
+}
 int main() {
-cout <<"Addition is :";
-  cout << 2+5 << endl;
+
+
+  	int a , b;
+	cout<<"Input two numbers : \n";
+	cin >> a >> b;
+	cout<<"Sum of two numbers : ";
+  
+
+  	cout <<sum1(a,b) << endl;	
+
+ 
 	
   	
-
 
 
 
