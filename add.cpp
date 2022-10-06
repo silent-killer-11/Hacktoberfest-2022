@@ -8,8 +8,9 @@ using namespace std;
 
 
 int main() {
-
+cout <<"Addition is :";
   cout << 2+5 << endl;
+	
   	
 
 
