@@ -1,0 +1,29 @@
+class Solution {
+public:
+     #define MOD 1000000007
+     int dp[32][1002];
+    int numRollsToTarget(int n, int k, int target) {
+        vector<vector<int>>dp(n+1,vector<int>(target+1,-1));
+        int ans=targetsum(n,k,target,dp);
+        return ans;
+    }
+    int targetsum(int dice, int k, int target, vector<vector<int>>&dp){
+        if(dice==0 && target==0) return 1;
+        if(dice<=0 || target<=0) return 0;
+        if(dp[dice][target]>-1)
+            return dp[dice][target];
+        int ans=0;
+        for(int i=1;i<=k;i++){
+            ans=(ans%MOD+ targetsum(dice-1,k,target-i,dp)%MOD)%MOD;
+        }
+      
+        return dp[dice][target]=ans;
+        
+    }
+    
+};
+/*
+To tackle with "modulo 10^9 + 7", you just simply learn two basic rules:
+1.) (a+b)%m = (a%m+b%m)%m.
+2.) (a*b)%m = (a%m*b%m)%m.
+*/
