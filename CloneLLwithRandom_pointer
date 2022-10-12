@@ -1,0 +1,26 @@
+ Node *copyList(Node *head)
+    {
+        map<Node *,Node*>mpp;
+        Node*temp=head;
+        Node *ans=new Node(-1);
+        Node *res=ans;
+        while(temp){
+            ans->next=new Node(temp->data);
+            ans=ans->next;
+            temp=temp->next;
+        }
+        ans=res->next;
+        temp=head;
+         while(temp){
+            mpp[temp]=ans;
+            temp=temp->next;
+            ans=ans->next;
+        }
+        temp=head;
+        ans=res->next;
+        while(temp){
+            ans->arb=mpp[temp->arb];
+            temp=temp->next;
+            ans=ans->next;
+        }
+        return res->next;
