@@ -1,3 +1,5 @@
+
+
 #define MOD 1000000007
 #include<vector>
 long long int solve(int n){
