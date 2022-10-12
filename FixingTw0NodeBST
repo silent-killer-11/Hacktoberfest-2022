@@ -1,0 +1,25 @@
+class Solution {
+    Node* first, *second, *prev; 
+    void traverse(Node* root){
+        if(!root)return;
+        traverse(root->left);
+        if(prev && (root->data < prev->data)){
+            if(!first){
+                first = prev; second = root;
+            }
+            else second = root;
+        }
+        prev = root;
+        traverse(root->right);
+    }
+  public:
+    void correctBST( struct Node* root )
+    {
+        // add code here.
+        first=NULL, second=NULL, prev=NULL;
+        traverse(root);
+        int temp = first->data;
+        first->data = second->data;
+        second->data = temp;
+    }
+};
