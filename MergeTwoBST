@@ -1,0 +1,35 @@
+Node* solve(Node*root,Node*temp){
+       if(root==NULL){
+           return temp;
+       }
+       if(temp->data>root->data){
+           root->right=solve(root->right,temp);
+       }
+       else{
+           root->left=solve(root->left,temp);
+       }
+       return root;
+   }
+   void in (vector<int>&ans,Node*root1){
+       if(root1==NULL){
+           return;
+       }
+       in(ans,root1->left);
+       ans.push_back(root1->data);
+       in(ans,root1->right);
+   }
+   vector<int> merge(Node *root1, Node *root2)
+   {
+      //Your code here
+      Node*curr=root2;
+      vector<int >st;
+      in(st,curr);
+      for(auto x:st){
+          Node* temp=new Node(x);
+          root1=solve(root1,temp);
+      }
+      vector<int>ans;
+      in(ans,root1);
+      return ans;
+
+}
