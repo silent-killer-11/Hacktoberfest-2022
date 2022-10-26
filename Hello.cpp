@@ -1,8 +1,9 @@
 // Your First C++ Program
 
 #include <iostream>
+using namespace std;
 
 int main() {
-    std::cout << "Hello I am VH!" << endl;
+    cout << "Hello!" << endl;
     return 0;
 }
