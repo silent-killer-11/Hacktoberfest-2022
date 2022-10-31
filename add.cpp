@@ -17,7 +17,7 @@ int main() {
 	cin >> a >> b;
 	cout<<"Sum of two numbers : ";
   
-
+	cout<<"the sum of a and b is : ";
   	cout <<sum1(a,b) << endl;	
 
  
